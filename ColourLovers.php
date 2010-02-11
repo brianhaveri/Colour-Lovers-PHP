@@ -41,7 +41,7 @@ class ColourLovers {
 	 * @param string $type
 	 * --------------------------------------------------
 	 */
-	public function setResultType($type) {
+	public function set_result_type($type) {
 		if(in_array($type, $this->_validResultTypes)) {
 			$this->_resultType = strtolower($type);
 		}
@@ -54,7 +54,7 @@ class ColourLovers {
 	 * @return string
 	 * --------------------------------------------------
 	 */
-	public function lastRequest() {
+	public function last_request() {
 		return $this->_lastRequest;
 	}
 
