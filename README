@@ -1,1 +1,62 @@
+=== What is Colour Lovers PHP? ===
+Colour Lovers PHP is an easy to use PHP library for the ColourLOVERS.com API
 
+
+
+=== What methods are available? ===
+There are 6 categories of methods available:
+1. Colors: color, colors, colors_new, colors_top, colors_random
+2. Palettes: palette, palettes, palettes_new, palettes_top, palettes_random
+3. Patterns: pattern, patterns, patterns_new, patterns_top, patterns_random
+4. Lovers: lover, lovers, lovers_new, lovers_top
+5. Stats: stats_color, stats_palettes, stats_patterns, stats_lovers
+6. Client Library: set_result_type, last_request
+
+
+
+=== Getting Started / Sample Code ===
+* Download ColourLovers.php.
+* Create a PHP file with this code:
+
+require('ColourLovers.php');
+$c = new ColourLovers;
+$results = $c->color('0099FF');
+print_r($results);
+
+* You're done. Awesome. Here's the output:
+
+Array
+(
+[color] => Array
+  (
+    [id] => 1602
+    [title] => dell.light blue
+    [userName] => COLOURlover
+    [numViews] => 4992
+    [numVotes] => 0
+    [numComments] => 8
+    [numHearts] => 0
+    [rank] => 9459
+    [dateCreated] => 2005-07-07 11:13:43
+    [hex] => 0099FF
+    [rgb] => Array
+      (
+         [red] => 0
+         [green] => 153
+         [blue] => 255
+      )
+    
+    [hsv] => Array
+      (
+         [hue] => 204
+         [saturation] => 100
+         [value] => 100
+      )
+    
+    [description] => 
+    [url] => http://www.colourlovers.com/color/0099FF/dell.light_blue
+    [imageUrl] => http://www.colourlovers.com/img/0099FF/100/100/dell.light_blue.png
+    [badgeUrl] => http://www.colourlovers.com/images/badges/c/1/1602_dell.light_blue.png
+    [apiUrl] => http://www.colourlovers.com/api/color/0099FF
+  )
+)
