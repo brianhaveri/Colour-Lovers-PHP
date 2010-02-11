@@ -5,7 +5,7 @@
  * PHP Client Library for the COLOURlovers API
  *  
  * @author Brian Haveri
- * @link http://code.google.com/p/colourloversphp
+ * @link http://github.com/brianhaveri/Colour-Lovers-PHP
  * @license MIT License http://en.wikipedia.org/wiki/MIT_License
  * 
  * Related COLOURlovers API documentation: http://www.colourlovers.com/api
