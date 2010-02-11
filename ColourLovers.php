@@ -29,7 +29,7 @@ class ColourLovers {
 	 * Don't change these
 	 * --------------------------------------------------
 	 */
-	private $_apiUrl	= 'http://www.colourlovers.com/api/'; // Root API address including trailing slash
+	private $_apiUrl = 'http://www.colourlovers.com/api/'; // Root API address including trailing slash
 	private $_validResponseFormats = array('xml', 'json');
 	private $_validResultTypes = array('array', 'object', 'raw');
 	private $_lastRequest = NULL;
@@ -372,9 +372,11 @@ class ColourLovers {
 	 * --------------------------------------------------
 	 */
 	private function _getResponse($request) {
-		$options = array(CURLOPT_URL					=> $request,
-							  CURLOPT_RETURNTRANSFER	=> TRUE,
-							  CURLOPT_USERAGENT			=> __CLASS__.' PHP Client Library');
+		$options = array(
+			CURLOPT_URL => $request,
+			CURLOPT_RETURNTRANSFER => TRUE,
+			CURLOPT_USERAGENT => __CLASS__.' PHP Client Library'
+		);
 		$ch = curl_init();
 		curl_setopt_array($ch, $options);
 		$query = curl_exec($ch);
@@ -433,7 +435,6 @@ class ColourLovers {
 	
 	
 	/**
-total	Total number of colors, palettes, patterns or lovers in the COLOURlovers system.
 	 * --------------------------------------------------
 	 * Recursively finds any objects and converts them to non-objects
 	 * This could be carved out into a separate class
@@ -467,8 +468,10 @@ total	Total number of colors, palettes, patterns or lovers in the COLOURlovers s
 	 * --------------------------------------------------
 	 */
 	private function _getRequest($method, $query=array()) {
-		$out = array($this->_apiUrl,
-						 $this->_convertMethod($method));
+		$out = array(
+			$this->_apiUrl,
+			$this->_convertMethod($method)
+		);
 		if(is_array($query) && count($query) > 0) {
 			$out[] = '?';
 			$out[] = http_build_query($query);
